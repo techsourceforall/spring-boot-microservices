@@ -4,12 +4,12 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/paymentdb
-    username: root
-    password: root
-    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:file:~/data/paymentdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
   application:

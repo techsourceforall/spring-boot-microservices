@@ -5,7 +5,7 @@ spring:
   application:
     name: API-GATEWAY
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:http://${CONFIG_SERVER_URL:localhost}:9296
   cloud:
     gateway:
       routes:
@@ -51,8 +51,8 @@ spring:
 
 okta:
   oauth2:
-    issuer: https://dev-15585796.okta.com/oauth2/default
+    issuer: https://trial-7971264.okta.com/oauth2/default
     audience: api://default
-    client-id: 0oa6cgklvwIS2SoFZ5d7
-    client-secret: L_VPQB5XQX5QAhnxaDqA0IhWG-TImnVpaHW7ER33
+    client-id: 0oa63beqkvglBuck8697
+    client-secret: 32v5XE1oMqWMgQvaUUrBoXsCra7tgB1svQfsPi9e
     scopes: openid, email, profile, offline_access
