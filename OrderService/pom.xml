@@ -60,12 +60,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-        <dependency>
-            <groupId>com.dailycodebuffer</groupId>
-            <artifactId>ProductService</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -139,6 +133,19 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<configuration>
+					<from>
+						<image>openjdk:11</image>
+					</from>
+					<to>
+						<image>registry.hub.docker.com/dailycodebuffer/orderservice</image>
+						<tags>${project.version}</tags>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
